@@ -13,7 +13,7 @@ const SKILL_NAME = 'Space Facts';
 const GET_FACT_MESSAGE = 'Here\'s your fact: ';
 const HELP_MESSAGE = 'You can say tell me a space fact, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
-const FALLBACK_MESSAGE = 'The Space Facts skill can\'t help you with that.  It can help you discover facts about space if you say tell me a space fact. What can I help you with?';
+const FALLBACK_MESSAGE = 'Errored. What can I help you with?';
 const FALLBACK_REPROMPT = 'What can I help you with?';
 const STOP_MESSAGE = 'Goodbye!';
 
@@ -116,19 +116,34 @@ const SessionEndedRequestHandler = {
   },
 };
 
-const searchWikiHandler = {
-  canHandle() {
+const LaunchHandler = {
+  canHandle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
-    return request.type === 'LaunchRequest' ||
-      (request.type === 'IntentRequest' &&
-        request.intent.name === 'GetWikiIntent');
+    return request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    axios.get('https://jwcy1cb1pa.execute-api.ap-southeast-2.amazonaws.com/dev/articles/tools')
+    return handlerInput.responseBuilder
+      .speak(HELP_REPROMPT)
+      .reprompt(HELP_REPROMPT)
+      .getResponse();
+  },
+};
+
+const SearchWikiHandler = {
+  canHandle(handlerInput) {
+    const request = handlerInput.requestEnvelope.request;
+    return request.type === 'IntentRequest' &&
+        request.intent.name === 'GetWikiIntent';
+  },
+  handle(handlerInput) {
+    const { value } = handlerInput.requestEnvelope.request.intent.slots.Query;
+    return axios.get(`https://jwcy1cb1pa.execute-api.ap-southeast-2.amazonaws.com/dev/search/${value}`)
       .then((response) => {
         const { title, text } = response.data;
-        console.log(title, text);
-        handlerInput.responseBuilder.speak(text).getResponse()
+        return handlerInput.responseBuilder
+          .speak(text || 'Content not found')
+          .reprompt(HELP_REPROMPT)
+          .getResponse()
       })
   }
 };
@@ -152,7 +167,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     // GetNewFactHandler,
-    searchWikiHandler,
+    LaunchHandler,
+    SearchWikiHandler,
     HelpHandler,
     ExitHandler,
     FallbackHandler,
