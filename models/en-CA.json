@@ -2,8 +2,7 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "diana ai",
-      "intents": [
-        {
+      "intents": [{
           "name": "AMAZON.CancelIntent",
           "samples": []
         },
@@ -13,10 +12,6 @@
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.FallbackIntent",
           "samples": []
         },
         {
