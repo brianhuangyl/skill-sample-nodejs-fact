@@ -3,6 +3,7 @@
 
 const Alexa = require('ask-sdk-core');
 const cookbook = require('alexa-cookbook.js');
+const axios = require('axios');
 
 //=========================================================================================================================================
 //TODO: The items below this comment need your attention.
@@ -115,6 +116,23 @@ const SessionEndedRequestHandler = {
   },
 };
 
+const searchWikiHandler = {
+  canHandle() {
+    const request = handlerInput.requestEnvelope.request;
+    return request.type === 'LaunchRequest' ||
+      (request.type === 'IntentRequest' &&
+        request.intent.name === 'GetWikiIntent');
+  },
+  handle(handlerInput) {
+    axios.get('https://jwcy1cb1pa.execute-api.ap-southeast-2.amazonaws.com/dev/articles/tools')
+      .then((response) => {
+        const { title, text } = response.data;
+        console.log(title, text);
+        handlerInput.responseBuilder.speak(text).getResponse()
+      })
+  }
+};
+
 const ErrorHandler = {
   canHandle() {
     return true;
@@ -133,7 +151,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
-    GetNewFactHandler,
+    // GetNewFactHandler,
+    searchWikiHandler,
     HelpHandler,
     ExitHandler,
     FallbackHandler,

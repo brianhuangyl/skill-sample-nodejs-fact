@@ -3,79 +3,59 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Learn fun facts about space.",
+          "summary": "Learn fun facts about Diana.",
           "examplePhrases": [
-            "Alexa open space facts",
-            "Alexa ask space facts for a fact",
-            "Alexa tell space facts to tell me trivia"
+            "Alexa open Diana"
           ],
           "keywords": [
-            "space",
-            "facts",
-            "trivia"
+            "Diana"
           ],
-          "name": "Space Facts",
-          "description": "Ask for Space Facts, and learn about what really matters, like dark matter.\n\nSpace Facts provides fun the whole family can enjoy and is guaranteed to make you smarter.\n\nTo start, just say \"Alexa, launch Space Facts\" or \"Alexa, open Space Facts\" to get a fact\".\n\nAt anytime, you can stop by saying \"Alexa, stop\""
+          "name": "Diana",
+          "description": "Ask Diana any questions"
         },
         "en-GB": {
-          "summary": "Learn fun facts about space.",
+          "summary": "Learn fun facts about Diana.",
           "examplePhrases": [
-            "Alexa open space facts",
-            "Alexa ask space facts for a fact",
-            "Alexa tell space facts to tell me trivia"
+            "Alexa open Diana"
           ],
           "keywords": [
-            "space",
-            "facts",
-            "trivia"
+            "Diana"
           ],
-          "name": "Space Facts",
-          "description": "Ask for Space Facts, and learn about what really matters, like dark matter.\n\nSpace Facts provides fun the whole family can enjoy and is guaranteed to make you smarter.\n\nTo start, just say \"Alexa, launch Space Facts\" or \"Alexa, open Space Facts\" to get a fact\".\n\nAt anytime, you can stop by saying \"Alexa, stop\""
+          "name": "Diana",
+          "description": "Ask Diana any questions"
         },
         "en-AU": {
-          "summary": "Learn fun facts about space.",
+          "summary": "Learn fun facts about Diana.",
           "examplePhrases": [
-            "Alexa open space facts",
-            "Alexa ask space facts for a fact",
-            "Alexa tell space facts to tell me trivia"
+            "Alexa open Diana"
           ],
           "keywords": [
-            "space",
-            "facts",
-            "trivia"
+            "Diana"
           ],
-          "name": "Space Facts",
-          "description": "Ask for Space Facts, and learn about what really matters, like dark matter.\n\nSpace Facts provides fun the whole family can enjoy and is guaranteed to make you smarter.\n\nTo start, just say \"Alexa, launch Space Facts\" or \"Alexa, open Space Facts\" to get a fact\".\n\nAt anytime, you can stop by saying \"Alexa, stop\""
+          "name": "Diana",
+          "description": "Ask Diana any questions"
         },
         "en-CA": {
-          "summary": "Learn fun facts about space.",
+          "summary": "Learn fun facts about Diana.",
           "examplePhrases": [
-            "Alexa open space facts",
-            "Alexa ask space facts for a fact",
-            "Alexa tell space facts to tell me trivia"
+            "Alexa open Diana"
           ],
           "keywords": [
-            "space",
-            "facts",
-            "trivia"
+            "Diana"
           ],
-          "name": "Space Facts",
-          "description": "Ask for Space Facts, and learn about what really matters, like dark matter.\n\nSpace Facts provides fun the whole family can enjoy and is guaranteed to make you smarter.\n\nTo start, just say \"Alexa, launch Space Facts\" or \"Alexa, open Space Facts\" to get a fact\".\n\nAt anytime, you can stop by saying \"Alexa, stop\""
+          "name": "Diana",
+          "description": "Ask Diana any questions"
         },
         "en-IN": {
-          "summary": "Learn fun facts about space.",
+          "summary": "Learn fun facts about Diana.",
           "examplePhrases": [
-            "Alexa open space facts",
-            "Alexa ask space facts for a fact",
-            "Alexa tell space facts to tell me trivia"
+            "Alexa open Diana"
           ],
           "keywords": [
-            "space",
-            "facts",
-            "trivia"
+            "Diana"
           ],
-          "name": "Space Facts",
-          "description": "Ask for Space Facts, and learn about what really matters, like dark matter.\n\nSpace Facts provides fun the whole family can enjoy and is guaranteed to make you smarter.\n\nTo start, just say \"Alexa, launch Space Facts\" or \"Alexa, open Space Facts\" to get a fact\".\n\nAt anytime, you can stop by saying \"Alexa, stop\""
+          "name": "Diana",
+          "description": "Ask Diana any questions"
         }
       },
       "isAvailableWorldwide": true,

@@ -38,6 +38,16 @@
             "give me something"
           ],
           "slots": []
+        },
+        {
+          "name": "GetWikiIntent",
+          "samples": [
+            "whitech knowledge",
+            "whitech wiki",
+            "tell me something",
+            "tell me something about whitech"
+          ],
+          "slots": []
         }
       ]
     }
